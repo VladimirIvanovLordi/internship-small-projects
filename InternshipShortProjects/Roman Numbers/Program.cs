@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
+using System.Linq;
 
 namespace Roman_Numerals
 {
@@ -13,38 +15,31 @@ namespace Roman_Numerals
         //converts integer into a single Roman "digit" in other words replaced 1000nds with M or 900ds with CM and so on
         public static string ReplaceWithRomanNumber(int romanIntegerValue, ref int inputNubmer)
         {
-            string result = "";
+            //string result = "";
+            StringBuilder resultBuilder = new StringBuilder("");
 
             int temp = inputNubmer / romanIntegerValue;
             for (int i = 0; i < temp; i++)
             {
-                result += romanNumeralEquivalents[romanIntegerValue];
+                resultBuilder.Append(romanNumeralEquivalents[romanIntegerValue]);
             }
             inputNubmer -= (romanIntegerValue * temp);
 
-            return result;
+            return resultBuilder.ToString();
         }
 
         //gets a whole number and returns its roman equivalent
         public static string ReplaceIntegerWithRomanNumber(int input)
         {
-            string result = "";
+            StringBuilder resultBuilder = new StringBuilder("");
+            IEnumerable<int> numbersReadyForUse = romanNumeralEquivalents.Keys.Reverse();
+            foreach (int romanNumberValue in numbersReadyForUse)
+            {
+                //TODO go through the dictionary using the key values in a reverse order
+                resultBuilder.Append(ReplaceWithRomanNumber(romanNumberValue, ref input));
+            }
 
-            result += ReplaceWithRomanNumber(1000, ref input);
-            result += ReplaceWithRomanNumber(900, ref input);
-            result += ReplaceWithRomanNumber(500, ref input);
-            result += ReplaceWithRomanNumber(400, ref input);
-            result += ReplaceWithRomanNumber(100, ref input);
-            result += ReplaceWithRomanNumber(90, ref input);
-            result += ReplaceWithRomanNumber(50, ref input);
-            result += ReplaceWithRomanNumber(40, ref input);
-            result += ReplaceWithRomanNumber(10, ref input);
-            result += ReplaceWithRomanNumber(9, ref input);
-            result += ReplaceWithRomanNumber(5, ref input);
-            result += ReplaceWithRomanNumber(4, ref input);
-            result += ReplaceWithRomanNumber(1, ref input);
-
-            return result;
+            return resultBuilder.ToString();
         }
 
         static void Main(string[] args)
