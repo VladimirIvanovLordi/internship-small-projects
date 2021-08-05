@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Roman Numbers", "Roman Numbers\Roman Numbers.csproj", "{218560D6-FA0D-4CAD-B93F-88085E3F36BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegerToWords", "IntegerToWords\IntegerToWords.csproj", "{92793F11-FA0E-4767-88DC-A9C4F4BACD71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegerToWords", "IntegerToWords\IntegerToWords.csproj", "{92793F11-FA0E-4767-88DC-A9C4F4BACD71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceImplementations", "InterfaceImplementations\InterfaceImplementations.csproj", "{0FE13A1F-950E-4AF0-A7D8-E672E0AF9128}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{92793F11-FA0E-4767-88DC-A9C4F4BACD71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92793F11-FA0E-4767-88DC-A9C4F4BACD71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92793F11-FA0E-4767-88DC-A9C4F4BACD71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FE13A1F-950E-4AF0-A7D8-E672E0AF9128}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FE13A1F-950E-4AF0-A7D8-E672E0AF9128}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FE13A1F-950E-4AF0-A7D8-E672E0AF9128}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FE13A1F-950E-4AF0-A7D8-E672E0AF9128}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
