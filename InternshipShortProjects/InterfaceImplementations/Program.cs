@@ -36,7 +36,12 @@ namespace InterfaceImplementations
                 Console.WriteLine(item);
             }
 
-            Console.WriteLine("\n\n");
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine();
+            }
+            //can add new lines with Environment.NewLine
+
 
             for (int i = 0; i < testTime.Count; i++)
             {
