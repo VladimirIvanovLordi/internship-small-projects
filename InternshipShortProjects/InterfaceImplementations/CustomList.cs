@@ -9,6 +9,9 @@ namespace InterfaceImplementations
 {
     class CustomList<T> : ICustomList<T>, IEnumerable<T>
     {
+        const int INDEX_BASE_SIZE = 8;
+
+
         public T this[int index]
         {
             get
@@ -21,7 +24,7 @@ namespace InterfaceImplementations
             }
         }
 
-        T[] listOfElements = new T[8];
+        T[] listOfElements = new T[INDEX_BASE_SIZE];
 
         //this field will be used both to track the number of elements in the Custom list
         //as well as the last index (as the last index is Count - 1)
@@ -46,23 +49,7 @@ namespace InterfaceImplementations
 
         public void Add(T item)
         {
-            if (Count == 0)
-            {
-                listOfElements[0] = item;
-            }
-            else if (Count == listOfElements.Length)
-            {
-                //resize takes the original array creates a new one with the new size
-                //then copies the elements from the original to the new one and finally replaces the old one with the new 
-                Array.Resize(ref listOfElements, listOfElements.Length + 8);
-                listOfElements[Count] = item;
-            }
-            else
-            {
-                listOfElements[Count] = item;
-            }
-
-            Count += 1;
+            Insert(Count, item);
         }
 
         public void Insert(int index, T item)
@@ -73,7 +60,9 @@ namespace InterfaceImplementations
             }
             else if (Count == listOfElements.Length)
             {
-                Array.Resize(ref listOfElements, listOfElements.Length + 8);
+                //resize takes the original array creates a new one with the new size
+                //then copies the elements from the original to the new one and finally replaces the old one with the new 
+                Array.Resize(ref listOfElements, listOfElements.Length + INDEX_BASE_SIZE);
             }
 
             for (int i = Count - 1; i >= index; i--)
