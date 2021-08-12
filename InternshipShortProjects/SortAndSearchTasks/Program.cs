@@ -80,17 +80,21 @@ namespace SortAndSearchTasks
 
         public static void IterativeSelectionSort(int[] arrayToBeSorted)
         {
+            int indexOfMin;
             for (int i = 0; i < arrayToBeSorted.Length - 1; i++)
             {
+                indexOfMin = i;
                 for (int j = i + 1; j < arrayToBeSorted.Length; j++)
                 {
-                    if (arrayToBeSorted[i] > arrayToBeSorted[j])
+                    if (arrayToBeSorted[indexOfMin] > arrayToBeSorted[j])
                     {
-                        int temp = arrayToBeSorted[i];
-                        arrayToBeSorted[i] = arrayToBeSorted[j];
-                        arrayToBeSorted[j] = temp;
+                        indexOfMin = j;
+
                     }
                 }
+                int temp = arrayToBeSorted[i];
+                arrayToBeSorted[i] = arrayToBeSorted[indexOfMin];
+                arrayToBeSorted[indexOfMin] = temp;
             }
         }
 
