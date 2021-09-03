@@ -53,7 +53,7 @@ namespace HouseDrawApp
             this.drawPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.drawPanel.Location = new System.Drawing.Point(119, 12);
             this.drawPanel.Name = "drawPanel";
-            this.drawPanel.Size = new System.Drawing.Size(916, 579);
+            this.drawPanel.Size = new System.Drawing.Size(916, 529);
             this.drawPanel.TabIndex = 0;
             this.drawPanel.Click += new System.EventHandler(this.drawPanel_Click);
             this.drawPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawPanel_Paint);
@@ -61,7 +61,7 @@ namespace HouseDrawApp
             // 
             // btnSaveInFile
             // 
-            this.btnSaveInFile.Location = new System.Drawing.Point(12, 52);
+            this.btnSaveInFile.Location = new System.Drawing.Point(13, 22);
             this.btnSaveInFile.Name = "btnSaveInFile";
             this.btnSaveInFile.Size = new System.Drawing.Size(100, 37);
             this.btnSaveInFile.TabIndex = 1;
@@ -71,7 +71,7 @@ namespace HouseDrawApp
             // 
             // btnSaveInBinaryFile
             // 
-            this.btnSaveInBinaryFile.Location = new System.Drawing.Point(12, 113);
+            this.btnSaveInBinaryFile.Location = new System.Drawing.Point(13, 83);
             this.btnSaveInBinaryFile.Name = "btnSaveInBinaryFile";
             this.btnSaveInBinaryFile.Size = new System.Drawing.Size(100, 37);
             this.btnSaveInBinaryFile.TabIndex = 2;
@@ -80,16 +80,17 @@ namespace HouseDrawApp
             // 
             // btnLoadFromFile
             // 
-            this.btnLoadFromFile.Location = new System.Drawing.Point(12, 177);
+            this.btnLoadFromFile.Location = new System.Drawing.Point(13, 147);
             this.btnLoadFromFile.Name = "btnLoadFromFile";
             this.btnLoadFromFile.Size = new System.Drawing.Size(100, 37);
             this.btnLoadFromFile.TabIndex = 3;
             this.btnLoadFromFile.Text = "Load File";
             this.btnLoadFromFile.UseVisualStyleBackColor = true;
+            this.btnLoadFromFile.Click += new System.EventHandler(this.btnLoadFromFile_Click);
             // 
             // btnLoadFromBinaryFile
             // 
-            this.btnLoadFromBinaryFile.Location = new System.Drawing.Point(12, 241);
+            this.btnLoadFromBinaryFile.Location = new System.Drawing.Point(13, 211);
             this.btnLoadFromBinaryFile.Name = "btnLoadFromBinaryFile";
             this.btnLoadFromBinaryFile.Size = new System.Drawing.Size(100, 37);
             this.btnLoadFromBinaryFile.TabIndex = 4;
@@ -101,7 +102,7 @@ namespace HouseDrawApp
             this.grpBoxTriangleOptions.Controls.Add(this.radBtnFilledTriangle);
             this.grpBoxTriangleOptions.Controls.Add(this.radBtnEmptyTriangle);
             this.grpBoxTriangleOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.grpBoxTriangleOptions.Location = new System.Drawing.Point(3, 337);
+            this.grpBoxTriangleOptions.Location = new System.Drawing.Point(2, 294);
             this.grpBoxTriangleOptions.Name = "grpBoxTriangleOptions";
             this.grpBoxTriangleOptions.Size = new System.Drawing.Size(115, 93);
             this.grpBoxTriangleOptions.TabIndex = 5;
@@ -137,7 +138,7 @@ namespace HouseDrawApp
             this.grpBoxRectangleOptions.Controls.Add(this.radBtnFilledRectangle);
             this.grpBoxRectangleOptions.Controls.Add(this.radBtnEmptyRectangle);
             this.grpBoxRectangleOptions.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.grpBoxRectangleOptions.Location = new System.Drawing.Point(3, 459);
+            this.grpBoxRectangleOptions.Location = new System.Drawing.Point(2, 416);
             this.grpBoxRectangleOptions.Name = "grpBoxRectangleOptions";
             this.grpBoxRectangleOptions.Size = new System.Drawing.Size(115, 88);
             this.grpBoxRectangleOptions.TabIndex = 6;
@@ -169,7 +170,7 @@ namespace HouseDrawApp
             // 
             // btnClearRadio
             // 
-            this.btnClearRadio.Location = new System.Drawing.Point(10, 553);
+            this.btnClearRadio.Location = new System.Drawing.Point(2, 510);
             this.btnClearRadio.Name = "btnClearRadio";
             this.btnClearRadio.Size = new System.Drawing.Size(107, 23);
             this.btnClearRadio.TabIndex = 7;
@@ -185,7 +186,7 @@ namespace HouseDrawApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1047, 603);
+            this.ClientSize = new System.Drawing.Size(1047, 544);
             this.Controls.Add(this.btnClearRadio);
             this.Controls.Add(this.grpBoxRectangleOptions);
             this.Controls.Add(this.grpBoxTriangleOptions);

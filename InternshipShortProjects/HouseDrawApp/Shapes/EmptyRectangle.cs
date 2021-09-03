@@ -4,10 +4,16 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Xml;
+using System.Xml.Serialization;
+
 
 namespace HouseDrawApp.Shapes
 {
-    public class EmptyRectangle : MyRectangle
+    [Serializable]
+    public class EmptyRectangle : MyRectangle, ISerializable
     {
         public EmptyRectangle(Brush brush, Point centerPoint)
             :base(brush, centerPoint)
