@@ -103,16 +103,18 @@ namespace InternetInfoGather
         private void RunParallel()
         {
             List<StringBuilder> testStrings = new List<StringBuilder>();
+            StringBuilder testResultString = new StringBuilder();
             List<Thread> threads = new List<Thread>();
             for (int i = 0; i < websites.Count; i++)
             {
-                testStrings.Add(new StringBuilder());
-                AddToStringBuilder(DownloadWebsiteOriginal(websites[i]), testStrings[i]);///
-                //threads.Add(new Thread(() => AddToStringBuilder(DownloadWebsiteOriginal(websites[i]), testStrings[i])));
-                threads.Add(new Thread(new ThreadStart(() => AddToStringBuilder(DownloadWebsiteOriginal(websites[i]), testStrings[i]))));
+                int a = i;
+                testStrings.Add(new StringBuilder(""));
+                AddToStringBuilder(DownloadWebsiteOriginal(websites[i]), testResultString);///
+                threads.Add(new Thread(() => AddToStringBuilder(DownloadWebsiteOriginal(websites[a]), testStrings[a])));
+                //threads.Add(new Thread(new ThreadStart(() => AddToStringBuilder(DownloadWebsiteOriginal(websites[a]), testResultString))));
                 threads[i].Start();
             }
-            StringBuilder testResultString = new StringBuilder();
+            tboxTest.Text = testResultString.ToString();
             foreach (StringBuilder stringBuilder in testStrings)
             {
                 testResultString.Append(stringBuilder.ToString());

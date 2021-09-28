@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestingStuff", "TestingStuf
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HouseDrawApp", "HouseDrawApp\HouseDrawApp.csproj", "{EFB34473-2EA2-46A0-B2EB-3D962F924483}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternetInfoGather", "InternetInfoGather\InternetInfoGather.csproj", "{CCDD96B1-B554-48CD-8AAB-DE252CA27FA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InternetInfoGather", "InternetInfoGather\InternetInfoGather.csproj", "{CCDD96B1-B554-48CD-8AAB-DE252CA27FA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MazeMaker", "MazeMaker\MazeMaker.csproj", "{33582928-393B-4DDC-BBC7-57EF2243DBAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{CCDD96B1-B554-48CD-8AAB-DE252CA27FA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCDD96B1-B554-48CD-8AAB-DE252CA27FA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCDD96B1-B554-48CD-8AAB-DE252CA27FA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33582928-393B-4DDC-BBC7-57EF2243DBAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33582928-393B-4DDC-BBC7-57EF2243DBAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33582928-393B-4DDC-BBC7-57EF2243DBAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33582928-393B-4DDC-BBC7-57EF2243DBAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
